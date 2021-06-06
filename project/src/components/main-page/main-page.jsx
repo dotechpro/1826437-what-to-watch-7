@@ -102,7 +102,9 @@ export default function MainPage(props) {
           </ul>
 
           <div className="catalog__films-list">
-            <MovieListItem></MovieListItem>
+            {
+              [...Array(20).keys()].map((num) => <MovieListItem key={`mli_+${num}`}></MovieListItem>)
+            }
           </div>
 
           <div className="catalog__more">
