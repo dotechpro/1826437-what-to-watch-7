@@ -4,6 +4,6 @@ import App from './components/app/app';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App name="Some movie" genre="Comedy" released="2021" />
   </React.StrictMode>,
   document.getElementById('root'));
