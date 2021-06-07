@@ -7,6 +7,7 @@ import MyListPage from '../pages/mylist-page/mylist-page';
 import FilmPage from '../pages/film-page/film-page';
 import ReviewPage from '../pages/review-page/review-page';
 import PlayerPage from '../pages/player-page/player-page';
+import NotFoundPage from '../pages/not-found-page/not-found-page';
 
 function App({name, genre, released}) {
   return (
@@ -40,6 +41,11 @@ function App({name, genre, released}) {
         <Route path="/player/:id" exact
           render={() => (
             <PlayerPage/>
+          )}
+        />
+        <Route
+          render={() => (
+            <NotFoundPage/>
           )}
         />
       </Switch>
