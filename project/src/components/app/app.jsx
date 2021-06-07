@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import MainPage from '../pages/main-page/main-page';
 import LoginPage from '../pages/login-page/login-page';
+import MyListPage from '../pages/mylist-page/mylist-page';
 
 function App({name, genre, released}) {
   return (
@@ -10,12 +11,17 @@ function App({name, genre, released}) {
       <Switch>
         <Route path="/" exact
           render={() => (
-            <MainPage name={name} genre={genre} released={released}></MainPage>
+            <MainPage name={name} genre={genre} released={released}/>
           )}
         />
         <Route path="/login" exact
           render={() => (
-            <LoginPage></LoginPage>
+            <LoginPage/>
+          )}
+        />
+        <Route path="/mylist" exact
+          render={() => (
+            <MyListPage/>
           )}
         />
       </Switch>
