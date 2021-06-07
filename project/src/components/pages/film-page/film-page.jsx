@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Logo from '../../ui/logo/logo';
 import MovieListItem from '../../ui/movie-list-item/movie-list-item';
 import PageFooter from '../../ui/page-footer/page-footer';
@@ -38,19 +39,19 @@ function FilmPage() {
               </p>
 
               <div className="film-card__buttons">
-                <button className="btn btn--play film-card__button" type="button">
+                <Link to="/player/1" className="btn btn--play film-card__button">
                   <svg viewBox="0 0 19 19" width="19" height="19">
                     <use xlinkHref="#play-s"></use>
                   </svg>
                   <span>Play</span>
-                </button>
-                <button className="btn btn--list film-card__button" type="button">
+                </Link>
+                <Link to="/mylist" className="btn btn--list film-card__button">
                   <svg viewBox="0 0 19 20" width="19" height="20">
                     <use xlinkHref="#add"></use>
                   </svg>
                   <span>My list</span>
-                </button>
-                <a href="add-review.html" className="btn film-card__button">Add review</a>
+                </Link>
+                <Link to="/films/1/review" className="btn film-card__button">Add review</Link>
               </div>
             </div>
           </div>
