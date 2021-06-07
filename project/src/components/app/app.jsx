@@ -6,6 +6,7 @@ import LoginPage from '../pages/login-page/login-page';
 import MyListPage from '../pages/mylist-page/mylist-page';
 import FilmPage from '../pages/film-page/film-page';
 import ReviewPage from '../pages/review-page/review-page';
+import PlayerPage from '../pages/player-page/player-page';
 
 function App({name, genre, released}) {
   return (
@@ -34,6 +35,11 @@ function App({name, genre, released}) {
         <Route path="/films/:id/review" exact
           render={() => (
             <ReviewPage/>
+          )}
+        />
+        <Route path="/player/:id" exact
+          render={() => (
+            <PlayerPage/>
           )}
         />
       </Switch>
