@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import MovieListItem from '../movie-list-item/movie-list-item';
+import MovieListItem from '../../ui/movie-list-item/movie-list-item';
 
 function MainPage({name, genre, released}) {
   return (
