@@ -1,6 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Logo from '../../ui/logo/logo';
+import Breadcrumbs from '../../ui/breadcrumbs/breadcrumbs';
+import UserBlock from '../../ui/user-block/user-block';
 
 function ReviewPage() {
   return (
@@ -15,27 +16,9 @@ function ReviewPage() {
         <header className="page-header">
           <Logo/>
 
-          <nav className="breadcrumbs">
-            <ul className="breadcrumbs__list">
-              <li className="breadcrumbs__item">
-                <Link to="/films/1" className="breadcrumbs__link">The Grand Budapest Hotel</Link>
-              </li>
-              <li className="breadcrumbs__item">
-                <Link to="/films/1/review" className="breadcrumbs__link">Add review</Link>
-              </li>
-            </ul>
-          </nav>
+          <Breadcrumbs/>
 
-          <ul className="user-block">
-            <li className="user-block__item">
-              <div className="user-block__avatar">
-                <img src="img/avatar.jpg" alt="User avatar" width="63" height="63" />
-              </div>
-            </li>
-            <li className="user-block__item">
-              <a href="/#" className="user-block__link">Sign out</a>
-            </li>
-          </ul>
+          <UserBlock/>
         </header>
 
         <div className="film-card__poster film-card__poster--small">
