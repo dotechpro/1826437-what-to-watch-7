@@ -1,8 +1,12 @@
 import React from 'react';
+import Logo from '../../ui/logo/logo';
 
 function NotFoundPage() {
   return (
-    <h1>404: Page is not found!</h1>
+    <React.Fragment>
+      <Logo/>
+      <h1>404: Page is not found!</h1>
+    </React.Fragment>
   );
 }
 
